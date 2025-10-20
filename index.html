@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel & Tours Home</title>
+  <link rel="stylesheet" href="style.css">
+  
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navigation Bar -->
+<header class="navbar">
+  <div class="logo-container">
+    <img src="logo.png" alt="Logo" class="logo">
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="mobile-menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <div class="menu-toggle" id="mobile-menu">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
+
+<!-- ===== Sidebar ===== -->
+<div class="sidebar" id="sidebar">
+  <span class="close-btn" id="close-btn">&times;</span>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#packages">Packages</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ===== Script ===== -->
+<script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const sidebar = document.getElementById('sidebar');
+  const closeBtn = document.getElementById('close-btn');
+
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h1 class="welcome-text">Welcome!</h1>
+      <h2 class="main-heading">We Provide Journeys, Not Just Tickets</h2>
+      <p class="description">
+        We provide air tickets, hotel bookings, tailored tours, visa assistance, 
+        and Umrah packages — all in one place, with personalized support and friendly guidance every step of the way.
+      </p>
+
+      <button class="explore-btn">
+        <span>Explore Stunning Destinations</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329 70" fill="none">
+          <path d="M0 23C0 10.2974 10.2975 0 23 0H305.205C317.908 0 328.205 10.2975 328.205 23V46.6413C328.205 59.3439 317.908 69.6413 305.205 69.6413H23C10.2975 69.6413 0 59.3439 0 46.6413V23Z" fill="#9C5A3C" fill-opacity="0.8"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+<section id="services" class="services-section">
+  <h2 class="section-title">SERVICES</h2>
+
+  <div class="services-container">
+
+    <!-- Visa -->
+    <div class="service-box">
+      <a href="visa-services.html">
+        <img src="visa.png" alt="Visa">
+        <p>VISA</p>
+      </a>
+    </div>
+
+    <!-- Ticketing -->
+    <div class="service-box">
+      <a href="ticketing-services.html">
+        <img src="ticketing.png" alt="Ticketing">
+        <p>TICKETING</p>
+      </a>
+    </div>
+
+    <!-- Events -->
+    <div class="service-box">
+      <a href="event-services.html">
+        <img src="events.png" alt="Events">
+        <p>EVENTS</p>
+      </a>
+    </div>
+
+    <!-- Hajj & Umrah -->
+    <div class="service-box">
+      <a href="hajj-umrah-services.html">
+        <img src="hajj.png" alt="Hajj & Umrah">
+        <p>HAJJ / UMRAH</p>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+  <section id="packages" class="packages-section">
+  <div class="blur-ellipse ellipse-top-left"></div>
+  <div class="blur-ellipse ellipse-bottom-right"></div>
+
+  <h2 class="section-title">TOP INTERNATIONAL HOTELS</h2>
+
+  <div class="hotels-grid">
+    <div class="hotel-card">
+      <img src="burj.jpg" alt="Burj Al Arab Jumeirah">
+      <div class="hotel-info">
+        <h3>DUBAI</h3>
+        <p>Burj Al Arab Jumeirah</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="atlantis.jpg" alt="Atlantis, The Palm">
+      <div class="hotel-info">
+        <h3>DUBAI</h3>
+        <p>Atlantis, The Palm</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="marina.jpg" alt="Address The Palm">
+      <div class="hotel-info">
+        <h3>DUBAI</h3>
+        <p>Address The Palm</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="bulgari.jpg" alt="Bulgari Resort Dubai">
+      <div class="hotel-info">
+        <h3>DUBAI</h3>
+        <p>Bulgari Resort Dubai</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="parkhyatt.jpg" alt="Park Hyatt Kuala Lumpur">
+      <div class="hotel-info">
+        <h3>MALAYSIA</h3>
+        <p>Park Hyatt Kuala Lumpur</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="mandarin.jpg" alt="Mandarin Oriental Kuala Lumpur">
+      <div class="hotel-info">
+        <h3>MALAYSIA</h3>
+        <p>Mandarin Oriental Kuala Lumpur</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SAUDI'S MOST POPULAR HOTELS -->
+<section class="saudi-hotels-section">
+   <div class="blur-ellipse-saudi"></div> <!-- ✨ new blurred ellipse background -->
+  <h2 class="section-title">SAUDI’S MOST POPULAR HOTELS</h2>
+
+  <div class="hotels-grid">
+    <div class="hotel-card">
+      <img src="banyantree.jpg" alt="Banyan Tree AlUla">
+      <div class="hotel-info">
+        <h3>SAUDI ARABIA</h3>
+        <p>Banyan Tree AlUla</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="ritzcarlton.jpg" alt="The Ritz-Carlton, Riyadh">
+      <div class="hotel-info">
+        <h3>RIYADH</h3>
+        <p>The Ritz-Carlton, Riyadh</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="rosewood.jpg" alt="Rosewood Jeddah">
+      <div class="hotel-info">
+        <h3>JEDDAH</h3>
+        <p>Rosewood Jeddah</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="shangrila.jpg" alt="Shangri-La Jeddah">
+      <div class="hotel-info">
+        <h3>JEDDAH</h3>
+        <p>Shangri-La Jeddah</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="parkhyattjeddah.jpg" alt="Park Hyatt Jeddah">
+      <div class="hotel-info">
+        <h3>JEDDAH</h3>
+        <p>Park Hyatt Jeddah</p>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="stregis.jpg" alt="St. Regis Riyadh">
+      <div class="hotel-info">
+        <h3>RIYADH</h3>
+        <p>St. Regis Riyadh</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- DISCOVER TOP DESTINATIONS -->
+<section class="discover-section">
+  <div class="discover-bg"></div> <!-- translucent background image -->
+  <h2 class="section-title">DISCOVER TOP DESTINATIONS</h2>
+
+  <div class="discover-grid">
+    <div class="destination-card">
+      <img src="dubai-destination.jpg" alt="Discover Dubai">
+      <div class="destination-info">
+        <h3>Discover Dubai, Your Way</h3>
+        <p>Adventure, Luxury and everything in between</p>
+      </div>
+    </div>
+
+    <div class="destination-card">
+      <img src="malaysia-destination.jpg" alt="Discover Malaysia">
+      <div class="destination-info">
+        <h3>Discover Malaysia</h3>
+        <p>A tropical tapestry of culture and adventure</p>
+      </div>
+    </div>
+
+    <div class="destination-card">
+      <img src="saudi-destination.jpg" alt="Discover Saudi Arabia">
+      <div class="destination-info">
+        <h3>Discover Saudi Arabia</h3>
+        <p>Where desert landscapes meet timeless heritage</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <!-- Left Column -->
+    <div class="about-left">
+      <h2 class="about-title">Crafting Excellence Together</h2>
+      <p class="about-text">
+        At B3 Travel & Tours, we believe that true excellence is achieved through collaboration — with our clients, partners, and team. 
+        Every journey we plan is built on trust, attention to detail, and a shared commitment to quality. 
+        By working hand in hand with travelers and listening to their unique needs, 
+        we create personalized experiences that blend convenience with comfort. 
+        Our dedication to continuous improvement and innovation ensures that we are not only meeting expectations 
+        but setting new standards in the travel industry. 
+        Together with our customers, we craft journeys that inspire, connect, and leave lasting memories.
+      </p>
+    </div>
+
+    <!-- Right Column -->
+    <div class="about-right">
+      <div class="main-image">
+        <img src="travelers.jpg" alt="Travelers Image">
+      </div>
+      <div class="circle-image">
+        <img src="circle-design.png" alt="Decorative Circle">
+      </div>
+    </div>
+  </div>
+
+  <!-- Vision Section -->
+  <div class="vision-section">
+    <div class="vision-left">
+      <div class="vision-large-img">
+        <img src="documents.jpg" alt="Documents Image">
+      </div>
+      <div class="vision-small-img">
+        <img src="tourists.jpg" alt="Tourists Image">
+      </div>
+    </div>
+
+    <div class="vision-right">
+      <h2 class="vision-title">Our Vision</h2>
+      <p class="vision-text">
+        Our vision is to establish B3 Travel & Tours as Pakistan’s most reliable and customer-centric travel consultancy, 
+        recognized globally for excellence in service, care, and convenience. 
+        We aspire to create a world where travel is not just about reaching a destination 
+        but about experiencing meaningful connections, cultural discoveries, and unforgettable memories. 
+        Looking ahead, we envision expanding our services to cater to diverse travel needs, 
+        from leisure and business to spiritual and educational journeys.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <!-- Left Form -->
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <p class="subtext">Our lovely team would love to hear from you</p>
+
+      <form>
+        <div class="input-group">
+          <div class="form-field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="First Name">
+          </div>
+          <div class="form-field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Last Name">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+        </div>
+
+        <div class="form-field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number">
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="Write your message..."></textarea>
+        </div>
+
+        <p class="privacy-text">You agree to our friendly privacy and policy</p>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Right Image -->
+    <div class="contact-image">
+      <img src="contact-man.jpg" alt="Contact Person">
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="logo.png" alt="B3 Travels Logo">
+    </div>
+    <div class="footer-about">
+      <h3>B3 Travel & Tours</h3>
+      <p>Leading travel consultancy for flights, hotels, visas and Umrah from Pakistan.</p>
+    </div>
+    <div class="footer-registered">
+      <h3>We are Registered</h3>
+      <p>B3 Travel And Tours is a trustworthy and registered travel agency in Pakistan which has earned a lot of trust by serving thousands of our valuable clients across the globe.</p>
+    </div>
+    <div class="footer-socials">
+      <a href="#"><img src="facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+      <a href="#"><img src="youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2025 B3 Travel & Tours — All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>

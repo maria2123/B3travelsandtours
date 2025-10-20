@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticketing Inquiry | B3 Travel & Tours</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <script src="formHandler.js"></script>
+
+  
+
+  <section class="ticketing-contact">
+    <div class="ticketing-form">
+      <h2>Let's Inquire</h2>
+      <p>Share your travel details and we’ll reach out with the best ticket options.</p>
+
+      <!-- Added id="ticketingForm" to match with JavaScript -->
+      <form id="ticketingForm">
+        <div class="form-row">
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+        </div>
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <select required>
+          <option value="">Select Service</option>
+          <option value="Air Ticket Booking">Air Ticket Booking</option>
+          <option value="Hotel Reservation">Hotel Reservation</option>
+          <option value="Holiday Package">Holiday Package</option>
+        </select>
+        <input type="text" placeholder="Destination / City" required />
+        <textarea rows="4" placeholder="Additional Details (Optional)"></textarea>
+        <button type="submit" class="btn-secondary">Send Message</button>
+      </form>
+    </div>
+
+    <div class="ticketing-image-side">
+      <img src="contact-man.jpg" alt="Contact Representative" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="logo.png" alt="B3 Travels Logo">
+      </div>
+      <div class="footer-about">
+        <h3>B3 Travel & Tours</h3>
+        <p>Leading travel consultancy for flights, hotels, visas and Umrah from Pakistan.</p>
+      </div>
+      <div class="footer-registered">
+        <h3>We are Registered</h3>
+        <p>B3 Travel And Tours is a trustworthy and registered travel agency in Pakistan which has earned a lot of trust by serving thousands of our valuable clients across the globe.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 B3 Travel & Tours — All rights reserved.</p>
+  </footer>
+
+  <!-- Make sure you call the formHandler.js -->
+  <script src="formHandler.js"></script>
+</body>
+</html>

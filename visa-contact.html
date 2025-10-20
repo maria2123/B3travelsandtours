@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visa Contact | B3 Travel & Tours</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Back button -->
+ 
+
+  <!-- Contact Section -->
+  <section class="visa-contact-section">
+    <div class="contact-container">
+      <!-- Left form -->
+      <div class="contact-form brown-form">
+        <h2>Get In Touch</h2>
+        <p>Let us know about your visa requirements and we will be in touch to arrange a consultation</p>
+
+        <!-- Add the form ID -->
+        <form id="visaForm"> <!-- Add an ID for this form to target it in formHandler.js -->
+          <div class="input-group">
+            <div class="form-field">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstName" placeholder="First Name" required />
+            </div>
+            <div class="form-field">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastName" placeholder="Last Name" required />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phoneNumber" placeholder="Enter your phone number" required />
+          </div>
+
+         <div class="form-field">
+ <label for="visaType">Select Visa Type</label>
+<select id="visaType" name="service" required>
+  <option value="">Select Service</option>
+  <option value="RIGHT TO WORK & VISA ASSESSMENT">Work & Skilled Visa</option>
+  <option value="TRAVEL COMPLIANCE ASSISTANT">Student Visa</option>
+  <option value="GLOBAL WORK PERMITS AND BUSINESS VISAS TOOL">Business Visa</option>
+  <option value="SPONSOR LICENCE & SKILLED WORKER VISAS">Tourist Visa</option>
+</select>
+
+</div>
+
+
+          <div class="form-field">
+            <label for="job">Job Title</label>
+            <input type="text" id="job" name="job" placeholder="Job Title" required />
+          </div>
+
+          <p class="privacy-text">You agree to our friendly privacy and policy</p>
+          
+          <!-- Send Message Button -->
+          <button type="submit" class="send-btn">Send Message</button>
+          
+        </form>
+      </div>
+
+      <!-- Right image -->
+      <div class="contact-image">
+        <img src="contact-man.jpg" alt="Contact Representative" />
+      </div>
+    </div>
+  </section>
+
+  <script src="formHandler.js"></script>
+
+  <script>
+    // Auto-select visa type based on URL parameter
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get('service');
+    if (service) {
+      document.getElementById('visaType').value = decodeURIComponent(service);
+    }
+  </script>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="logo.png" alt="B3 Travels Logo">
+      </div>
+      <div class="footer-about">
+        <h3>B3 Travel & Tours</h3>
+        <p>Leading travel consultancy for flights, hotels, visas and Umrah from Pakistan.</p>
+      </div>
+      <div class="footer-registered">
+        <h3>We are Registered</h3>
+        <p>B3 Travel And Tours is a trustworthy and registered travel agency in Pakistan which has earned a lot of trust by serving thousands of our valuable clients across the globe.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 B3 Travel & Tours — All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
