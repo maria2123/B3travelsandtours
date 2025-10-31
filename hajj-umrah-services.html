@@ -1,115 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hajj & Umrah Services | B3 Travel & Tours</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Umrah & Hajj Packages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Navbar -->
+  <!-- Top Navbar -->
   <header class="navbar">
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo" class="logo">
+    <div class="nav-inner">
+      <img src="logo.png" alt="B3 Travels" class="logo" />
+      <nav class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#packages">Packages</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button id="mobile-menu" class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#packages">Packages</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
+  <!-- Mobile Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <button id="close-btn" class="close-btn" aria-label="Close menu">×</button>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#packages">Packages</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </aside>
 
-  <!-- Back Link -->
-  <a href="index.html#services" class="back-link">← Back</a>
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Hero with Umrah form">
+    <div class="overlay"></div>
 
-  <!-- Hajj & Umrah Hero Section -->
-  <section class="hajj-hero">
-    <!-- Blurred Glow Ellipses -->
-    <div class="ellipse ellipse-top-left"></div>
-    <div class="ellipse ellipse-bottom-right"></div>
+    <div class="content">
+      <h2 class="section-title">UMRAH PACKAGES</h2>
 
-    <h1>Hajj & Umrah Services</h1>
-    <p>Your Spiritual Journey, Perfectly Planned</p>
+ <form class="form-box" id="umrah-form">
 
-    <div class="hajj-images">
-      <img src="hajj-kaaba.jpg" alt="Kaaba">
-      <img src="madina-green-dome.jpg" alt="Madina Green Dome">
-    </div>
+  <!-- Row 1 -->
+  <div class="select-wrapper">
+    <select required>
+      <option value="" disabled selected>Departure Airport</option>
+      <option>Calgary (YYC)</option>
+      <option>Edmonton (YEG)</option>
+      <option>Fredericton (YFC)</option>
+      <option>Gander (YQX)</option>
+      <option>Halifax (YHZ)</option>
+      <option>Moncton (YQM)</option>
+      <option>Montreal (YUL)</option>
+      <option>Ottawa (YOW)</option>
+      <option>Quebec City (YQB)</option>
+      <option>St. Johns (YYT)</option>
+      <option>Toronto (YYZ)</option>
+      <option>Vancouver (YVR)</option>
+      <option>Victoria (YYJ)</option>
+      <option>Winnipeg (YWG)</option>
+    </select>
+  </div>
 
-    <a href="#hajj-contact" class="btn-primary">GET STARTED</a>
+  <div class="select-wrapper">
+    <select required>
+      <option value="" disabled selected>Arrival Airport</option>
+      <option>Jeddah</option>
+      <option>Madina</option>
+      <option>Riyadh</option>
+      <option>Dammam</option>
+      <option>Abha</option>
+      <option>Yanbu</option>
+      <option>Taif</option>
+    </select>
+  </div>
+
+  <div class="select-wrapper">
+    <select required>
+      <option value="" disabled selected>01 Adult - 00 Child - 00 Infant</option>
+      <option>01 Adult</option>
+      <option>02 Adults</option>
+      <option>03 Adults</option>
+      <option>04 Adults</option>
+    </select>
+  </div>
+
+  <input type="date" required />
+
+  <div class="select-wrapper">
+    <select required>
+      <option value="" disabled selected>Nights in Makkah</option>
+      <!-- 1–30 options -->
+      <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+      <option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+      <option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option>
+      <option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option>
+      <option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+    </select>
+  </div>
+
+  <div class="select-wrapper">
+    <select required>
+      <option value="" disabled selected>Nights in Madinah</option>
+      <!-- 1–30 options copied -->
+      <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+      <option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+      <option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option>
+      <option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option>
+      <option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+    </select>
+  </div>
+
+
+  <!-- Row 2 -->
+  <input type="text" placeholder="Lead passenger name" class="wide" required />
+  <input type="tel" placeholder="Phone number" required />
+  <input type="email" placeholder="Email" class="wide" required />
+  <input type="text" placeholder="Room type" />
+  <input type="text" placeholder="Ans" />
+
+  <button type="submit" class="submit-btn">Submit</button>
+
+</form>
+
+
+<!-- Button to navigate to Hajj packages page -->
+<a href="hajj.html" class="hajj-btn-link">
+  <button id="hajj-btn" class="hajj-btn" type="button">HAJJ PACKAGES</button>
+</a>
+
+
+    <!-- soft glow accents -->
+    <!--<span class="glow glow-left"></span>
+    <span class="glow glow-right"></span>-->
   </section>
 
-  <!-- Hajj Contact Form -->
-  <section id="hajj-contact" class="hajj-contact-section">
-    <div class="hajj-contact-container">
-      
-      <!-- Left: Form -->
-      <div class="hajj-form-box">
-        <h2>Let’s Inquire</h2>
-        <p>Our lovely team would love to hear from you</p>
+<section class="umrah-info-section">
+  <div class="umrah-info-container">
 
-        <form action="#" method="post" class="hajj-form">
-          <div class="form-row">
-            <input type="text" name="firstName" placeholder="First Name" required>
-            <input type="text" name="lastName" placeholder="Last Name" required>
-          </div>
+    <div class="umrah-text">
+      <h2>Cheap Umrah 2025 Packages</h2>
+      <p class="sub-heading">Umrah 2025: Begin A Journey of Faith With Affordable Prices</p>
+      <img src="islamic-divider.png" alt="" class="divider">
 
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-
-          <div class="form-row">
-            <input type="text" name="departure" placeholder="Departure" required>
-            <input type="text" name="destination" placeholder="Destination" required>
-          </div>
-
-          <div class="form-row">
-            <input type="date" name="start_date" placeholder="Start Date">
-            <input type="date" name="end_date" placeholder="End Date">
-          </div>
-
-          <p class="privacy-text">You agree to our friendly privacy and policy</p>
-          <button type="submit" class="btn-submit">Send Message</button>
-        </form>
+      <!-- Image appears here on mobile (M2) -->
+      <div class="umrah-image mobile-show">
+        <img src="madina.png" alt="Umrah 2025 Packages">
       </div>
 
-      <!-- Right: Image -->
-      <div class="hajj-image-box">
-        <img src="contact-man.jpg" alt="Contact Representative">
-      </div>
-
+      <h3>Umrah Packages 2025:</h3>
+      <p>
+        Planning to perform Umrah in 2025? Let B3 Travels take you towards your spiritual destination with comfort and peace of mind.
+        Our affordable Umrah packages are specially designed to offer convenience, comfort, and a memorable spiritual journey.
+      </p>
+      <p>
+        B3 Travels offers a wide range of Umrah visa services, economy & 5-star hotel options near Haram, return flights, 
+        and ziarat arrangements for both Makkah and Madinah. Whether you are traveling alone, with family, or in a group, 
+        we ensure your journey remains smooth and stress-free.
+      </p>
     </div>
-  </section>
-<script src="formHandler.js"></script>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="logo.png" alt="B3 Travels Logo">
-      </div>
-      <div class="footer-about">
-        <h3>B3 Travel & Tours</h3>
-        <p>Leading travel consultancy for flights, hotels, visas and Umrah from Pakistan.</p>
-      </div>
-      <div class="footer-registered">
-        <h3>We are Registered</h3>
-        <p>B3 Travel And Tours is a trustworthy and registered travel agency in Pakistan which has earned a lot of trust by serving thousands of our valuable clients across the globe.</p>
-      </div>
-      <div class="footer-socials">
-        <a href="#"><img src="facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
-        <a href="#"><img src="youtube.png" alt="YouTube"></a>
-        <a href="#"><img src="instagram.png" alt="Instagram"></a>
-      </div>
+    <!-- Desktop Image Right -->
+    <div class="umrah-image desktop-show">
+      <img src="madina.png" alt="Umrah 2025 Packages">
     </div>
-    <p class="footer-copy">© 2025 B3 Travel & Tours — All rights reserved.</p>
-  </footer>
-<script src="formHandler.js"></script>
+
+  </div>
+</section>
+
+
+<section class="packages" id="packages">
+  <div class="pkg-container">
+
+    <!-- Tabs -->
+    <div class="pkg-tabs" role="tablist" aria-label="Filter packages">
+      <button class="pkg-tab is-active" data-filter="all" role="tab" aria-selected="true">All Packages</button>
+      <button class="pkg-tab" data-filter="5" role="tab" aria-selected="false">5 Star</button>
+      <button class="pkg-tab" data-filter="4" role="tab" aria-selected="false">4 Star</button>
+      <button class="pkg-tab" data-filter="3" role="tab" aria-selected="false">3 Star</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="pkg-grid">
+      <!-- 5★ (5 items) -->
+      <article class="pkg-card" data-cat="5">
+        <img src="pkg1.jpg" alt="Platinum Executive Umrah Package 2025">
+        <div class="pkg-body">
+          <h4>Platinum Executive Umrah Package 2025</h4>
+          <p class="pkg-meta">10 Nights · 5★ Hotels · Return Flights</p>
+          <p class="pkg-hotels">Makkah: Fairmont Clock Tower · Madinah: The Oberoi</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 725,000</strong></div>
+        </div>
+      </article>
+
+      <article class="pkg-card" data-cat="5">
+        <img src="pkg2.jpg" alt="Premium Gold Umrah Package – 10 Nights">
+        <div class="pkg-body">
+          <h4>Premium Gold Umrah Package – 10 Nights</h4>
+          <p class="pkg-meta">10 Nights · 5★ Hotels · Private Transfers</p>
+          <p class="pkg-hotels">Makkah: Conrad · Madinah: Dar Al Iman InterContinental</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 689,000</strong></div>
+        </div>
+      </article>
+
+      <article class="pkg-card" data-cat="5">
+        <img src="pkg3.jpg" alt="Royal Elite Umrah Experience – 12 Nights">
+        <div class="pkg-body">
+          <h4>Royal Elite Umrah Experience – 12 Nights</h4>
+          <p class="pkg-meta">12 Nights · 5★ Hotels · Ziyarat Included</p>
+          <p class="pkg-hotels">Makkah: Raffles · Madinah: Anwar Al Madinah Movenpick</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 845,000</strong></div>
+        </div>
+      </article>
+
+      <article class="pkg-card" data-cat="5">
+        <img src="pkg4.jpg" alt="Deluxe Family Umrah Package – 7 Nights">
+        <div class="pkg-body">
+          <h4>Deluxe Family Umrah Package – 7 Nights</h4>
+          <p class="pkg-meta">7 Nights · 5★ Family Rooms · Breakfast</p>
+          <p class="pkg-hotels">Makkah: Hilton Suites · Madinah: Shaza Al Madinah</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 559,000</strong></div>
+        </div>
+      </article>
+
+      <article class="pkg-card" data-cat="5">
+        <img src="pkg5.jpg" alt="VIP Luxury Umrah With Ziarat – 14 Nights">
+        <div class="pkg-body">
+          <h4>VIP Luxury Umrah With Ziarat – 14 Nights</h4>
+          <p class="pkg-meta">14 Nights · 5★ Suites · Private Guide</p>
+          <p class="pkg-hotels">Makkah: Jabal Omar Marriott · Madinah: The Oberoi</p>
+        <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 1,195,000</strong></div>
+        </div>
+      </article>
+
+      <!-- 4★ (2 items) -->
+      <article class="pkg-card" data-cat="4">
+        <img src="pkg6.jpg" alt="Comfort Plus 4-Star Umrah – 10 Nights">
+        <div class="pkg-body">
+          <h4>Comfort Plus 4-Star Umrah – 10 Nights</h4>
+          <p class="pkg-meta">10 Nights · 4★ Hotels · Shared Transfers</p>
+          <p class="pkg-hotels">Makkah: Swissotel Al Maqam · Madinah: Al Haram Hotel</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 389,000</strong></div>
+        </div>
+      </article>
+
+      <article class="pkg-card" data-cat="4">
+        <img src="pkg7.jpg" alt="Economy Premium 4-Star Family Umrah – 7 Nights">
+        <div class="pkg-body">
+          <h4>Economy Premium 4-Star Family Umrah – 7 Nights</h4>
+          <p class="pkg-meta">7 Nights · 4★ Family Rooms · Breakfast</p>
+          <p class="pkg-hotels">Makkah: Al Shohada · Madinah: Elaf Taiba</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 315,000</strong></div>
+        </div>
+      </article>
+
+      <!-- 3★ (1 item) -->
+      <article class="pkg-card" data-cat="3">
+        <img src="pkg8.jpg" alt="Affordable 3-Star Umrah Saver – 10 Nights">
+        <div class="pkg-body">
+          <h4>Affordable 3-Star Umrah Saver – 10 Nights</h4>
+          <p class="pkg-meta">10 Nights · 3★ Hotels · Group Transport</p>
+          <p class="pkg-hotels">Makkah: Dar Al Eiman Ajyad · Madinah: Al Eiman Ohud</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 249,000</strong></div>
+        </div>
+      </article>
+   
+    <!-- NEW #9 — 5★ -->
+ <article class="pkg-card" data-cat="5">
+        <img src="pkg9.jpg" alt="Haram View Elite – 9 Nights">
+        <div class="pkg-body">
+          <h4>Haram View Elite – 9 Nights</h4>
+          <p class="pkg-meta">9 Nights · 5★ Hotels · Private Transfers</p>
+          <p class="pkg-hotels">Makkah: Fairmont Clock Tower · Madinah: The Oberoi</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 615,000</strong></div>
+        </div>
+      </article>
+
+      <!-- NEW #10 — 5★ -->
+      <article class="pkg-card" data-cat="5">
+        <img src="pkg10.jpg" alt="Signature Serenity Umrah – 11 Nights">
+        <div class="pkg-body">
+          <h4>Signature Serenity Umrah – 11 Nights</h4>
+          <p class="pkg-meta">11 Nights · 5★ Suites · Ziyarat Included</p>
+          <p class="pkg-hotels">Makkah: Raffles · Madinah: Anwar Al Madinah Mövenpick</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 775,000</strong></div>
+        </div>
+      </article>
+
+      <!-- NEW #11 — 4★ -->
+      <article class="pkg-card" data-cat="4">
+        <img src="pkg11.jpg" alt="Family Comfort 4-Star Umrah – 8 Nights">
+        <div class="pkg-body">
+          <h4>Family Comfort 4-Star Umrah – 8 Nights</h4>
+          <p class="pkg-meta">8 Nights · 4★ Family Rooms · Breakfast</p>
+          <p class="pkg-hotels">Makkah: Swissotel Al Maqam · Madinah: Al Haram Hotel</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 339,000</strong></div>
+        </div>
+      </article>
+
+      <!-- NEW #12 — 3★ -->
+      <article class="pkg-card" data-cat="3">
+        <img src="pkg12.jpg" alt="Smart Saver 3-Star Umrah – 7 Nights">
+        <div class="pkg-body">
+          <h4>Smart Saver 3-Star Umrah – 7 Nights</h4>
+          <p class="pkg-meta">7 Nights · 3★ Hotels · Group Transport</p>
+          <p class="pkg-hotels">Makkah: Dar Al Eiman Ajyad · Madinah: Al Eiman Ohud</p>
+          <div class="pkg-foot"><span class="spacer"></span><strong class="pkg-price">PKR 219,000</strong></div>
+        </div>
+      </article>
+
+ </div>
+  </div>
+</section>
+
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuToggle.addEventListener('click', () => sidebar.classList.add('active'));
+    closeBtn.addEventListener('click', () => sidebar.classList.remove('active'));
+  </script>
+  <script>
+  (function(){
+    const tabs = document.querySelectorAll('.pkg-tab');
+    const cards = document.querySelectorAll('.pkg-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // active state
+        tabs.forEach(t => t.classList.remove('is-active'));
+        tab.classList.add('is-active');
+
+        const filter = tab.dataset.filter; // "all", "5", "4", "3"
+        cards.forEach(card => {
+          const cat = card.dataset.cat;
+          const show = (filter === 'all') || (cat === filter);
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  })();
+</script>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="logo.png" alt="B3 Travels Logo">
+    </div>
+    <div class="footer-about">
+      <h3>B3 Travel & Tours</h3>
+      <p>Leading travel consultancy for flights, hotels, visas and Umrah from Pakistan.</p>
+    </div>
+    <div class="footer-registered">
+      <h3>We are Registered</h3>
+      <p>B3 Travel And Tours is a trustworthy and registered travel agency in Pakistan which has earned a lot of trust by serving thousands of our valuable clients across the globe.</p>
+    </div>
+    <div class="footer-socials">
+      <a href="#"><img src="facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+      <a href="#"><img src="youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2025 B3 Travel & Tours — All rights reserved.</p>
+</footer>
 </body>
 </html>

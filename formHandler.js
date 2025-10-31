@@ -32,3 +32,11 @@ handleFormSubmit("visaForm", "/visa");
 handleFormSubmit("eventForm", "/event");
 handleFormSubmit("ticketForm", "/ticket");
 handleFormSubmit("umrahForm", "/umrah");
+// JavaScript to enable left/right buttons
+document.querySelector('.left-arrow').addEventListener('click', function() {
+  // Enable the action for left arrow
+});
+
+document.querySelector('.right-arrow').addEventListener('click', function() {
+  // Enable the action for right arrow
+});

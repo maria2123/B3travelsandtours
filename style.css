@@ -109,38 +109,55 @@ body {
 }
 
 /* ===== Sidebar (Mobile Menu) ===== */
+/* Sidebar Styling */
 .sidebar {
   position: fixed;
   top: 0;
-  right: -260px;
+  right: -260px; /* Hidden initially off-screen */
   height: 100vh;
-  width: 250px;
+  width: 250px; /* Adjust the width as per your preference */
   background-color: #fff;
-  box-shadow: -10px 0 20px rgba(0,0,0,0.15);
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   padding: 80px 20px;
   align-items: flex-start;
   justify-content: flex-start;
   z-index: 2000;
-  transition: right 0.3s ease;
+  transition: right 0.3s ease; /* Smooth sliding transition */
 }
 
+/* Active State for Sidebar */
 .sidebar.active {
-  right: 0;
+  right: 0; /* Bring the sidebar into view */
 }
 
+/* Sidebar Links Styling */
 .sidebar a {
   text-decoration: none;
   color: #000;
   font-size: 18px;
   font-weight: 600;
   margin: 15px 0;
+  transition: color 0.3s ease;
 }
 
+/* Hover Effect for Links */
 .sidebar a:hover {
-  color: #ffb27e;
+  color: #ffb27e; /* Color on hover */
 }
+
+/* Sidebar Close Button */
+.close-btn {
+  align-self: flex-end;
+  font-size: 28px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
+  margin-top: 20px;
+}
+
 
 /* ===== Close Button ===== */
 .close-btn {
@@ -1763,379 +1780,373 @@ form#visaForm {
   }
 }
 
-/* === HAJJ HERO SECTION === */
-/* === HAJJ HERO SECTION === */
-/* === HAJJ HERO SECTION === */
-/* === HAJJ HERO SECTION === */
-.hajj-hero {
-  text-align: center;
-  padding: 80px 40px;
-  background: #fff7f3;
+/* === HAJJ Umrah Services  === */
+/* General Styles */
+/* General Styles */
+:root{
+  --green-700:#004F39;
+  --green-800:#003c2b;
+  --brand-brown:#9C5A3C;
+  --white:#ffffff;
+  --glass-bg: rgba(0,79,57,0.72);   /* glassmorphism */
+  --glass-stroke: rgba(255,255,255,0.18);
+  --text:#111827;
 }
 
-.hajj-hero h1 {
-  color: #4b2c15;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:#f4f4f4;
+  overflow-x:hidden; /* prevent horizontal scroll */
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid rgba(0,0,0,0.06);
+}
+.nav-inner{
+  max-width:1200px; margin:0 auto; padding:10px 16px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.logo{height:54px; width:auto}
+.nav-links{display:none; gap:28px}          /* hidden by default (mobile-first) */
+.nav-links a{color:#111; text-decoration:none; font-weight:600}
+.nav-links a:hover{opacity:.8}
+.hamburger{display:block; background:none; border:0; cursor:pointer}
+.hamburger span{display:block; width:26px; height:3px; background:#111; margin:5px 0; border-radius:2px}
+
+/* ===== SIDEBAR (mobile) ===== */
+.sidebar{
+  position:fixed; inset:0 0 0 auto; width:78%;
+  background:#fff; transform:translateX(100%); transition:.3s ease; z-index:60;
+  padding:20px; display:flex; flex-direction:column; gap:16px;
+}
+.sidebar.active{transform:translateX(0)}
+.close-btn{align-self:flex-end; font-size:28px; border:0; background:none; cursor:pointer}
+.sidebar a{color:#111; text-decoration:none; font-weight:600}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  min-height:82vh;
+  display:grid;
+  place-items:center;
+  padding:40px 16px 72px;
+  background:url("madina-green-dome.jpg") no-repeat left center / cover; /* H2 layout */
+}
+.overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.25) 35%, rgba(0,0,0,.15) 60%, rgba(0,0,0,0) 85%);
+  pointer-events:none;
+}
+.content{
+  position:relative; z-index:1;
+  width:100%; max-width:1200px; margin:0 auto;
+  display:flex; flex-direction:column; align-items:center; gap:18px;
+}
+.section-title{
+  color:#7a3e2a; font-size:28px; font-weight:700; letter-spacing:.3px;
+  text-shadow:0 6px 18px rgba(0,0,0,.35);
+  margin:0 0 6px;
+}
+
+/* ===== FORM (Glassmorphism, MOBILE-FIRST) ===== */
+.form-box{
+  width:100%;
+  background:var(--glass-bg);
+  border:1px solid var(--glass-stroke);
+  border-radius:22px;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  backdrop-filter:blur(10px);
+  padding:22px;
+  display:grid;
+  gap:14px;
+  grid-template-columns:1fr;              /* mobile: 1 column */
+}
+.form-box input,
+.form-box select{
+  height:44px; border:0; border-radius:10px;
+  padding:10px 12px;
+  background:#e7d9d2; font-size:14px; outline:none;
+}
+.select-wrapper{position:relative}
+.form-box select{
+  appearance:none;
+  background:#e7d9d2 url('data:image/svg+xml;utf8,<svg fill="%23633" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+  background-size:14px;
+  padding:10px 38px 10px 12px;
+  cursor:pointer;
+}
+.form-box select:focus{outline:2px solid var(--brand-brown)}
+.form-box .wide{grid-column:auto}
+
+/* Submit button */
+.submit-btn{
+  width:100%;                 /* full-width on mobile */
+  justify-self:stretch;
+  padding:10px 26px; border-radius:10px; border:0; cursor:pointer;
+  background:var(--brand-brown); color:#fff; font-weight:700; font-size:15px;
+  transition:.25s ease;
+}
+.submit-btn:hover{background:#7a3e2a}
+
+/* ===== HAJJ BUTTON ===== */
+.hajj-wrap{display:flex; justify-content:center; width:100%; margin-top:16px}
+.hajj-btn{
+  background:var(--brand-brown); color:#fff; font-weight:700;
+  padding:14px 26px; border-radius:999px; border:0; cursor:pointer;
+  box-shadow:0 10px 24px rgba(0,0,0,.2);
+  transition:.25s ease;
+}
+.hajj-btn:hover{transform:translateY(-1px)}
+
+/* soft brown glows */
+.glow{position:absolute; width:420px; height:320px; background:var(--brand-brown); filter:blur(140px); border-radius:50%; z-index:0; opacity:.55}
+.glow-left{bottom:-70px; left:-60px}
+.glow-right{bottom:-90px; right:-80px}
+
+/* ===== BREAKPOINTS (MOBILE → UP) ===== */
+
+/* >= 641px (tablet) */
+@media (min-width: 641px){
+  .section-title{font-size:32px}
+  .form-box{
+    grid-template-columns:repeat(3, 1fr);   /* tablet: 3 columns */
+  }
+  .submit-btn{
+    grid-column: span 3;                    /* center button row */
+    justify-self:center;
+    width:auto;
+  }
+}
+
+/* >= 992px (desktop) */
+@media (min-width: 992px){
+  .nav-links{display:flex}
+  .hamburger{display:none}
+
+  .section-title{font-size:36px}
+  .hero{min-height:82vh; background-position:left center}
+
+  .form-box{
+    grid-template-columns:repeat(6, 1fr);   /* desktop: 6 columns (2-row design) */
+  }
+  .form-box .wide{grid-column:span 2}
+  .submit-btn{
+    grid-column:6 / 7;                      /* right aligned button */
+    justify-self:end;
+    width:auto;
+  }
+}
+/* ===== UMRAH INFO SECTION (Page 2) ===== */
+/* ===== UMRAH INFO SECTION (Page 2) ===== */
+.umrah-info-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #dac4b6 0%, #ffffff 100%); /* H1 gradient */
+}
+
+.umrah-info-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.umrah-text h2 {
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 10px;
+  color: #8a4e2c;
+  margin-bottom: 6px;
 }
 
-.hajj-hero p {
-  color: #555;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-/* === Images Layout === */
-.hajj-images {
-  display: flex;
-  flex-direction: row; /* ✅ stays horizontal on web */
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  margin: 0 auto 40px auto;
-  max-width: 1100px;
-  padding: 0 20px;
-}
-
-.hajj-images img {
-  width: 48%; /* ✅ equal size horizontally */
-  height: 300px;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.hajj-images img:hover {
-  transform: scale(1.02);
-}
-
-/* === Button === */
-.btn-primary {
-  display: inline-block;
-  background: #9C5A3C;
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 6px;
-  text-decoration: none;
+.umrah-text .sub-heading {
+  font-size: 14px;
+  color: #7a5845;
   font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background: #FEA601;
-}
-
-/* ===== Responsive Fixes ===== */
-@media (max-width: 1024px) {
-  .hajj-hero {
-    padding: 60px 20px;
-  }
-
-  .hajj-images {
-    gap: 20px;
-    max-width: 95%;
-  }
-
-  .hajj-images img {
-    height: 260px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hajj-hero {
-    padding: 40px 15px;
-  }
-
-  .hajj-images {
-    flex-direction: column; /* ✅ becomes vertical on toggle/mobile */
-    align-items: center;
-    gap: 25px;
-    width: 100%;
-  }
-
-  .hajj-images img {
-    width: 90%;
-    max-width: 400px;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .hajj-hero h1 {
-    font-size: 28px;
-  }
-
-  .hajj-hero p {
-    font-size: 16px;
-    margin-bottom: 25px;
-  }
-
-  .btn-primary {
-    font-size: 15px;
-    padding: 10px 24px;
-  }
-}
-
-
-/* === HAJJ CONTACT FORM === */
-.hajj-contact-section {
-  background: #fff7f3;
-  padding: 80px 60px;
-}
-
-.hajj-contact-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
-
-.hajj-form-box {
-  flex: 1;
-  background: #9C5A3C;
-  color: #fff;
-  padding: 50px;
-}
-
-.hajj-form-box h2 {
-  font-size: 26px;
   margin-bottom: 10px;
+}
+
+.divider {
+  width: 140px;
+  margin: 12px 0 28px 0;
+}
+
+.umrah-text h3 {
+  font-size: 24px;
   font-weight: 700;
+  color: #004F39;
+  margin-bottom: 12px;
 }
 
-.hajj-form-box p {
-  color: #f1f1f1;
-  margin-bottom: 25px;
-}
-
-.hajj-form input,
-.hajj-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
-
-.hajj-form .form-row {
-  display: flex;
-  gap: 15px;
-}
-
-.privacy-text {
-  font-size: 13px;
-  margin: 10px 0;
-  color: #f1f1f1;
-}
-
-.btn-submit {
-  background: #e6e6e6;
+.umrah-text p {
   color: #333;
-  font-weight: 600;
-  border: none;
-  padding: 12px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+
+/* Right-side main image */
+.umrah-image img {
   width: 100%;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
+  display: block;
+  object-fit: contain;
+  border: none;
+  background: none;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25); /* Soft shadow only */
 }
 
-.btn-submit:hover {
-  background: #FEA601;
-  color: #fff;
+/* Hide/show for layout */
+.desktop-show { display: block; }
+.mobile-show { display: none; }
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 992px) {
+  .umrah-info-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  /* M2: Show image after heading */
+  .desktop-show { display: none; }
+  .mobile-show {
+    display: block;
+    margin: 20px 0;
+  }
+
+  .umrah-image img {
+    max-width: 90%;
+    margin: auto;
+  }
 }
 
-/* === BLURRED GLOW EFFECT === */
-.hajj-hero {
-  position: relative;
-  text-align: center;
-  padding: 100px 40px;
-  background: #fff7f3;
-  overflow: hidden;
+@media (max-width: 600px) {
+  .umrah-text h2 { font-size: 28px; }
+  .umrah-text h3 { font-size: 20px; }
+  .umrah-image img { max-width: 100%; }
 }
-
-.ellipse {
-  position: absolute;
-  width: 538px;
-  height: 373px;
-  border-radius: 538px;
-  background: #D99036;
-  filter: blur(191.8px);
-  z-index: 0;
-  opacity: 0.6;
-}
-
-.ellipse-top-left {
-  top: -120px;
-  left: -200px;
-}
-
-.ellipse-bottom-right {
-  bottom: -150px;
-  right: -200px;
-}
-
-.hajj-hero h1,
-.hajj-hero p,
-.hajj-images,
-.hajj-hero .btn-primary {
-  position: relative;
-  z-index: 1;
-}
-
-/* === CONTACT SECTION === */
-.hajj-contact-section {
-  padding: 100px 60px;
-  background: #fff7f3;
-}
-
-.hajj-contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
+/* ===== PACKAGES SECTION ===== */
+/* ===== PACKAGES SECTION (clean, mobile-first) ===== */
+/* PACKAGES SECTION */
+.packages {
+  padding: 60px 20px;
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+}
+
+.pkg-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* === Form Box === */
-.hajj-form-box {
-  flex: 1 1 50%;
-  background: #9C5A3C;
-  color: #fff;
-  padding: 50px;
+/* Tabs */
+.pkg-tabs {
   display: flex;
-  flex-direction: column;
+  gap: 12px;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 28px;
 }
 
-.hajj-form-box h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
+.pkg-tab {
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 18px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #9C5A3C 0%, #E9D7CD 100%);
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
+  transition: .25s ease;
+}
+
+.pkg-tab:hover { transform: translateY(-2px); }
+
+.pkg-tab.is-active {
+  outline: 2px solid rgba(0,0,0,.09);
+  box-shadow: 0 10px 22px rgba(0,0,0,.22);
+}
+
+/* GRID: 4 CARDS PER ROW DESKTOP */
+.pkg-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Card */
+.pkg-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(0,0,0,.12);
+  display: flex;
+  flex-direction: column;
+  transition: .3s ease-in-out;
+}
+
+.pkg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 36px rgba(0,0,0,.18);
+}
+
+.pkg-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.pkg-body { padding: 14px; }
+
+.pkg-body h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.pkg-meta, .pkg-hotels {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+.pkg-foot { display: flex; align-items: center; }
+.pkg-foot .spacer { flex: 1; }
+.pkg-price {
+  color: #9C5A3C;
+  font-size: 16px;
   font-weight: 700;
 }
 
-.hajj-form-box p {
-  font-size: 15px;
-  color: #f0e7e7;
-  margin-bottom: 25px;
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1199px) { .pkg-grid { grid-template-columns: repeat(3, 1fr);} }
+@media (max-width: 992px)  { .pkg-grid { grid-template-columns: repeat(2, 1fr);} }
+@media (max-width: 640px)  { 
+  .pkg-grid { grid-template-columns: 1fr; }
+  .pkg-tab { width: calc(50% - 6px); text-align: center; }
+}
+/* Sidebar in Mobile View */
+.sidebar {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 250px; /* You can adjust this width */
+  height: 100%; 
+  background: #fff; 
+  transform: translateX(-100%); /* Hide the sidebar by default */
+  transition: transform 0.3s ease;
+  z-index: 10; /* Ensure it's on top */
 }
 
-.hajj-form input,
-.hajj-form select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
-
-.hajj-form .form-row {
-  display: flex;
-  gap: 15px;
-}
-
-.hajj-form .form-row input {
-  flex: 1;
-}
-
-.btn-submit {
-  background: #e6e6e6;
-  color: #333;
-  font-weight: 600;
-  border: none;
-  padding: 12px;
-  width: 100%;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-submit:hover {
-  background: #FEA601;
-  color: #fff;
-}
-
-/* === Image Box === */
-.hajj-image-box {
-  flex: 1 1 50%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-}
-
-.hajj-image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* === Responsive Fixes === */
-@media (max-width: 1024px) {
-  .hajj-contact-section {
-    padding: 60px 30px;
-  }
-
-  .hajj-form-box {
-    padding: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hajj-contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hajj-form-box {
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-    padding: 30px 20px;
-  }
-
-  .hajj-image-box {
-    width: 100%;
-    border-radius: 0 0 15px 15px;
-    height: 300px; /* ✅ Ensures equal height */
-  }
-
-  .hajj-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0 0 15px 15px;
-  }
-
-  .hajj-form-box h2 {
-    font-size: 22px;
-  }
-
-  .hajj-form-box p {
-    font-size: 14px;
-  }
-
-  .btn-submit {
-    font-size: 15px;
-    padding: 10px;
-  }
-}
-
-
-html {
-  scroll-behavior: smooth;
+.sidebar.active {
+  transform: translateX(0); /* Make the sidebar visible */
 }
 
